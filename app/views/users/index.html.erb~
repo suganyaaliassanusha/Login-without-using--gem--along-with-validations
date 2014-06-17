@@ -1,0 +1,19 @@
+<h1> LIST OF USERS </h1>
+<%= link_to 'New user', controller: 'users' %>
+<table>
+<tr>
+<th>Name</th>
+<th>password</th>
+</tr>
+
+<% @user.each do |user| %>
+<tr>
+<th><%= user.name %></th>
+<td><%= user.password %></td>
+<td><%= link_to 'show', user_path(user) %></td>
+<td><%= link_to 'edit', edit_user_path(user) %></td>
+<td><%= link_to 'destroy', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+</tr>
+<% end %>
+
+</table>
