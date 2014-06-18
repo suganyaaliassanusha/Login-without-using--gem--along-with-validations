@@ -7,5 +7,13 @@
  <strong>password</strong>
  <%= @user.password %>
  </p>
+<h2>Comments</h2>
+<%= render @user.comments %>
+ 
+
+
+<h2>Add a comment on this user</h2>
+<%= render "comments/form" %>
+
 <%= link_to 'Back', users_path %>
 <%= link_to 'edit', edit_user_path(@user) %>
