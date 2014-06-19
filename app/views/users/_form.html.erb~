@@ -20,8 +20,12 @@
 <%= f.label :password %>
 <%= f.password_field :password %>
 </p>
+
+<P>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
 <p>
-<%= f.submit %>
+<%= f.submit "sign up" %>
 </p>
 
 <% end %>
